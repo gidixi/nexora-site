@@ -39,24 +39,24 @@ const securityItems = [
 
 export default function ContractsSection() {
   return (
-    <section id="contracts" style={{ padding: '0 24px 80px', maxWidth: 960, margin: '0 auto' }}>
+    <section id="contracts" style={{ padding: '0 20px 80px', maxWidth: 960, margin: '0 auto' }}>
       <div style={{ textAlign: 'center', marginBottom: 40 }}>
         <div className="badge badge-muted" style={{ marginBottom: 12 }}>Smart Contracts</div>
-        <h2 style={{ fontSize: 32, fontWeight: 800, margin: 0, letterSpacing: '-0.5px' }}>Yul Inline Assembly</h2>
-        <p style={{ color: 'var(--text-muted)', marginTop: 10, fontSize: 15 }}>3 contracts — 81 Foundry tests — deployed on Polygon mainnet. -57% bytecode vs equivalent Solidity.</p>
+        <h2 style={{ fontSize: 'clamp(24px, 5vw, 32px)', fontWeight: 800, margin: 0, letterSpacing: '-0.5px' }}>Yul Inline Assembly</h2>
+        <p style={{ color: 'var(--text-muted)', marginTop: 10, fontSize: 'clamp(13px, 3vw, 15px)' }}>3 contracts — 81 Foundry tests — deployed on Polygon mainnet. -57% bytecode vs equivalent Solidity.</p>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16, marginBottom: 24 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16, marginBottom: 24 }}>
         {contracts.map(c => (
           <div key={c.name} className="card" style={{ borderTop: `2px solid ${c.color}` }}>
             <div className="card-header">
-              <span>{c.name}</span>
+              <span style={{ fontSize: 10 }}>{c.name}</span>
               <span className="badge badge-success">{c.tests} tests</span>
             </div>
             <div className="card-body">
               <div style={{ marginBottom: 12 }}>
                 <div style={{ fontSize: 10, color: 'var(--text-sub)', marginBottom: 4 }}>DEPLOYED ADDRESS</div>
-                <code style={{ fontSize: 11, color: 'var(--blue)', wordBreak: 'break-all' }}>{c.address}</code>
+                <code style={{ fontSize: 10, color: 'var(--blue)', wordBreak: 'break-all', lineHeight: 1.5 }}>{c.address}</code>
               </div>
               <div style={{ display: 'flex', gap: 8, marginBottom: 12 }}>
                 <div style={{ flex: 1, background: 'var(--bg-base)', borderRadius: 4, padding: '6px 8px', fontSize: 11 }}>
@@ -70,9 +70,9 @@ export default function ContractsSection() {
               </div>
               <div style={{ fontSize: 10, color: 'var(--text-sub)', marginBottom: 6 }}>FUNCTIONS</div>
               {c.functions.map(f => (
-                <div key={f} style={{ display: 'flex', alignItems: 'center', gap: 6, padding: '3px 0' }}>
-                  <span style={{ color: c.color, fontSize: 10 }}>›</span>
-                  <code style={{ fontSize: 11, color: 'var(--text-muted)' }}>{f}</code>
+                <div key={f} style={{ display: 'flex', alignItems: 'flex-start', gap: 6, padding: '3px 0' }}>
+                  <span style={{ color: c.color, fontSize: 10, marginTop: 1, flexShrink: 0 }}>›</span>
+                  <code style={{ fontSize: 11, color: 'var(--text-muted)', wordBreak: 'break-word' }}>{f}</code>
                 </div>
               ))}
             </div>
@@ -80,11 +80,10 @@ export default function ContractsSection() {
         ))}
       </div>
 
-      {/* Security */}
       <div className="card">
         <div className="card-header">Security Model</div>
         <div className="card-body">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 10 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 10 }}>
             {securityItems.map(item => (
               <div key={item.label} style={{
                 background: 'var(--bg-base)', borderRadius: 6, padding: '10px 12px',

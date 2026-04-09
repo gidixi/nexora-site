@@ -2,7 +2,6 @@ const strategies = [
   {
     id: 'sandwich',
     color: 'var(--red)',
-    icon: '🥪',
     name: 'Sandwich Attack',
     badge: 'Live on mainnet',
     badgeClass: 'badge-success',
@@ -18,7 +17,6 @@ const strategies = [
   {
     id: 'backrun',
     color: 'var(--blue)',
-    icon: '↩',
     name: 'Backrun',
     badge: 'Zero capital risk',
     badgeClass: 'badge-info',
@@ -33,8 +31,7 @@ const strategies = [
   {
     id: 'flashloan',
     color: 'var(--purple)',
-    icon: '⚡',
-    name: 'Flash Loan Arbitrage',
+    name: 'Flash Loan Arb',
     badge: '0% fee — Balancer V2',
     badgeClass: 'badge-muted',
     description: 'Executes cross-DEX triangular arbitrage cycles with zero capital using Balancer V2 flash loans (0% fee on Polygon). Optimal input found via ternary search on a concave profit function.',
@@ -49,13 +46,13 @@ const strategies = [
 
 export default function StrategiesSection() {
   return (
-    <section id="strategies" style={{ padding: '0 24px 80px', maxWidth: 960, margin: '0 auto' }}>
+    <section id="strategies" style={{ padding: '0 20px 80px', maxWidth: 960, margin: '0 auto' }}>
       <div style={{ textAlign: 'center', marginBottom: 40 }}>
         <div className="badge badge-muted" style={{ marginBottom: 12 }}>Strategies</div>
-        <h2 style={{ fontSize: 32, fontWeight: 800, margin: 0, letterSpacing: '-0.5px' }}>Three MEV Strategies, One Engine</h2>
-        <p style={{ color: 'var(--text-muted)', marginTop: 10, fontSize: 15 }}>Each strategy shares the same Rust async runtime and on-chain executor contracts.</p>
+        <h2 style={{ fontSize: 'clamp(24px, 5vw, 32px)', fontWeight: 800, margin: 0, letterSpacing: '-0.5px' }}>Three MEV Strategies, One Engine</h2>
+        <p style={{ color: 'var(--text-muted)', marginTop: 10, fontSize: 'clamp(13px, 3vw, 15px)' }}>Each strategy shares the same Rust async runtime and on-chain executor contracts.</p>
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
         {strategies.map(s => (
           <div key={s.id} className="card" style={{ borderTop: `2px solid ${s.color}` }}>
             <div className="card-header">
@@ -69,13 +66,14 @@ export default function StrategiesSection() {
                   background: 'var(--bg-base)', border: '1px solid var(--border)',
                   borderRadius: 6, padding: '8px 12px', marginBottom: 16,
                   fontFamily: 'var(--font-mono)', fontSize: 12, color: s.color,
+                  overflowX: 'auto', whiteSpace: 'nowrap',
                 }}>
                   {s.formula}
                 </div>
               )}
               <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                 {s.details.map(d => (
-                  <div key={d.label} style={{ display: 'flex', justifyContent: 'space-between', gap: 8 }}>
+                  <div key={d.label} style={{ display: 'flex', justifyContent: 'space-between', gap: 8, flexWrap: 'wrap' }}>
                     <span style={{ fontSize: 11, color: 'var(--text-sub)', flexShrink: 0 }}>{d.label}</span>
                     <span style={{ fontSize: 11, color: 'var(--text-muted)', textAlign: 'right', fontFamily: 'var(--font-mono)' }}>{d.value}</span>
                   </div>

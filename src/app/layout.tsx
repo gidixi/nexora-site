@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     description: 'Production-grade MEV infrastructure. Rust engine + Yul contracts. Sandwich · Backrun · Flash Loan Arb.',
     type: 'website',
   },
+  viewport: 'width=device-width, initial-scale=1',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
