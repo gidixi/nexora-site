@@ -1,12 +1,4 @@
-import Image from 'next/image'
-
-/** Abstract network / infrastructure — NASA on Unsplash (Unsplash License: free to use). */
-const HERO_IMAGE = {
-  src: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&h=675&q=80',
-  alt: 'Abstract view of Earth at night illustrating global connectivity and infrastructure',
-  creditName: 'NASA',
-  creditUrl: 'https://unsplash.com/@nasa',
-} as const
+import HeroPolygonVisual from '@/components/HeroPolygonVisual'
 
 export default function HeroSection() {
   return (
@@ -48,25 +40,12 @@ export default function HeroSection() {
           {' '}— source code is not open source and is not publicly distributed. Technical documentation and runbooks are shared with authorized licensees under agreement.
         </p>
 
-        <div
-          className="hero-visual-frame"
-          style={{ maxWidth: 720, margin: '0 auto 32px' }}
-        >
-          <div style={{ position: 'relative', width: '100%', aspectRatio: '16 / 9' }}>
-            <Image
-              src={HERO_IMAGE.src}
-              alt={HERO_IMAGE.alt}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 720px"
-              priority
-            />
+        <div className="hero-visual-frame" style={{ maxWidth: 720, margin: '0 auto 32px' }}>
+          <div className="hero-visual-inner">
+            <HeroPolygonVisual />
           </div>
           <div className="hero-visual-caption">
-            Hero visual: stock photo under{' '}
-            <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash License</a>
-            {' '}·{' '}
-            <a href={HERO_IMAGE.creditUrl} target="_blank" rel="noopener noreferrer">{HERO_IMAGE.creditName}</a>
+            Procedural mesh · low-poly facets, wireframe paths, and node graph (SVG)
           </div>
         </div>
 
