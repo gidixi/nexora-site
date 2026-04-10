@@ -8,6 +8,8 @@ const pipeline = [
   { step: '07', label: 'Submit', desc: 'Marlin / RPC', color: 'var(--blue)' },
 ]
 
+import { NEXORA_DOCS_REPO_URL } from '@/lib/site'
+
 const filters = [
   'base_not_at_endpoint', 'zero_amount', 'known_router',
   'pool_resolve_failed', 'slippage_victim_too_low',
@@ -21,7 +23,11 @@ export default function ArchitectureSection() {
         <div className="badge badge-muted" style={{ marginBottom: 12 }}>Architecture</div>
         <h2 style={{ fontSize: 'clamp(24px, 5vw, 32px)', fontWeight: 700, margin: 0, letterSpacing: '-0.03em' }}>Async Rust pipeline</h2>
         <p style={{ color: 'var(--text-muted)', marginTop: 10, fontSize: 'clamp(13px, 3vw, 15px)', maxWidth: 560, marginLeft: 'auto', marginRight: 'auto' }}>
-          End-to-end path from market data to signed calldata. Latency budgets are measured in our test environments; production figures vary with peers, hardware, and chain conditions.
+          End-to-end path from market data to signed calldata. Latency budgets are measured in our test environments; production figures vary with peers, hardware, and chain conditions.{' '}
+          <a href={NEXORA_DOCS_REPO_URL} target="_blank" rel="noopener noreferrer" className="footer-link" style={{ color: 'var(--blue)' }}>
+            See the repo docs
+          </a>
+          {' '}for module layout, env configuration, and runbooks.
         </p>
       </div>
 

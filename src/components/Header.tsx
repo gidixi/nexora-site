@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import { NEXORA_DOCS_REPO_URL } from '@/lib/site'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -53,6 +54,13 @@ export default function Header() {
               onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-muted)')}
             >{item}</a>
           ))}
+          <a
+            href={NEXORA_DOCS_REPO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary"
+            style={{ marginLeft: 4, fontSize: 12 }}
+          >Docs</a>
           <a href="#waitlist" className="btn btn-primary" style={{ marginLeft: 8 }}>Request updates</a>
         </nav>
 
@@ -105,6 +113,14 @@ export default function Header() {
               onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
             >{item}</a>
           ))}
+          <a
+            href={NEXORA_DOCS_REPO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
+            className="btn btn-secondary"
+            style={{ marginTop: 8, justifyContent: 'center', padding: '10px' }}
+          >Documentation (GitHub)</a>
           <a
             href="#waitlist"
             onClick={() => setMenuOpen(false)}

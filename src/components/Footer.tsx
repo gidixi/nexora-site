@@ -1,3 +1,5 @@
+import { NEXORA_DOCS_REPO_URL } from '@/lib/site'
+
 export default function Footer() {
   return (
     <footer className="section-page-x" style={{
@@ -20,6 +22,11 @@ export default function Footer() {
           <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>Nexora — Polygon execution stack</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
+          <a href={NEXORA_DOCS_REPO_URL}
+            target="_blank" rel="noopener noreferrer"
+            className="footer-link"
+            style={{ fontSize: 12, color: 'var(--text-sub)' }}
+          >Docs (GitHub)</a>
           <a href="https://polygonscan.com/address/0x7E3Aa7C95299c5FDD94D1f63F5022b3F75EB76dC"
             target="_blank" rel="noopener noreferrer"
             className="footer-link"
