@@ -17,17 +17,16 @@ export default function Footer() {
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             fontSize: 11, fontWeight: 800, color: '#fff', flexShrink: 0,
           }}>N</div>
-          <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>Nexora MEV Bot — Polygon PoS</span>
+          <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>Nexora — Polygon execution stack</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
           <a href="https://polygonscan.com/address/0x7E3Aa7C95299c5FDD94D1f63F5022b3F75EB76dC"
             target="_blank" rel="noopener noreferrer"
+            className="footer-link"
             style={{ fontSize: 12, color: 'var(--text-sub)' }}
-            onMouseEnter={e => (e.currentTarget.style.color = 'var(--blue)')}
-            onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-sub)')}
-          >PolygonScan ↗</a>
+          >Verify on PolygonScan</a>
           <span style={{ fontSize: 12, color: 'var(--text-sub)' }}>© 2026 Nexora</span>
-          <span className="badge badge-warning" style={{ fontSize: 10 }}>Simulation Phase</span>
+          <span className="badge badge-neutral" style={{ fontSize: 10 }}>Pre-production</span>
         </div>
       </div>
     </footer>

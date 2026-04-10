@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 
-export default function WaitlistSection({ count }: { count: number }) {
+export default function WaitlistSection() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -29,13 +29,12 @@ export default function WaitlistSection({ count }: { count: number }) {
           pointerEvents: 'none',
         }} />
 
-        <div className="badge badge-info" style={{ marginBottom: 16 }}>Early Access</div>
-        <h2 style={{ fontSize: 'clamp(20px, 5vw, 28px)', fontWeight: 800, margin: '0 0 10px', letterSpacing: '-0.5px' }}>
-          Get notified when live trading starts
+        <div className="badge badge-neutral" style={{ marginBottom: 16 }}>Product updates</div>
+        <h2 style={{ fontSize: 'clamp(20px, 5vw, 28px)', fontWeight: 700, margin: '0 0 10px', letterSpacing: '-0.03em' }}>
+          Stay informed
         </h2>
         <p style={{ color: 'var(--text-muted)', fontSize: 'clamp(13px, 3vw, 14px)', marginBottom: 32, maxWidth: 480, margin: '0 auto 32px' }}>
-          We&apos;re launching license access in Q2 2026. Early waitlist members get priority review,
-          detailed PnL reports, and direct technical discussion.
+          Occasional email when we publish verified metrics, documentation, or licensing options. No marketing sequences—unsubscribe any time.
         </p>
 
         {submitted ? (
@@ -47,7 +46,7 @@ export default function WaitlistSection({ count }: { count: number }) {
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <polyline points="20 6 9 17 4 12" />
             </svg>
-            You&apos;re on the list. We&apos;ll be in touch.
+            Thank you. If this were connected to a mailing provider, you would receive a confirmation email.
           </div>
         ) : (
           <form onSubmit={handleSubmit} style={{
@@ -74,13 +73,13 @@ export default function WaitlistSection({ count }: { count: number }) {
             <button type="submit" className="btn btn-primary" disabled={loading}
               style={{ padding: '11px 20px', fontSize: 14, justifyContent: 'center', width: '100%' }}
             >
-              {loading ? <span className="spinner spinner-sm" /> : 'Join Waitlist'}
+              {loading ? <span className="spinner spinner-sm" /> : 'Subscribe'}
             </button>
           </form>
         )}
 
         <p style={{ marginTop: 16, fontSize: 11, color: 'var(--text-sub)' }}>
-          No spam. License access only — not a public bot service.
+          This form is a UI demo only—submissions are not stored or emailed yet. Hook it to your provider when ready.
         </p>
       </div>
     </section>

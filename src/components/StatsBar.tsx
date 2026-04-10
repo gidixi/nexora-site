@@ -1,10 +1,10 @@
 const stats = [
-  { label: 'Smart Contracts', value: '3', sub: 'Deployed mainnet', color: 'var(--green)' },
-  { label: 'Bytecode size', value: '~2.8kb', sub: '-57% vs Solidity', color: 'var(--blue)' },
-  { label: 'Test suite', value: '281', sub: 'Foundry + proptest', color: 'var(--purple)' },
-  { label: 'Strategies', value: '3', sub: 'Sandwich · Backrun · FL', color: 'var(--cyan)' },
-  { label: 'Flash loan fee', value: '0%', sub: 'Balancer V2', color: 'var(--yellow)' },
-  { label: 'Block time', value: '2s', sub: 'Polygon PoS target', color: 'var(--text-muted)' },
+  { label: 'Executors (Yul)', value: '3', sub: 'Polygon mainnet (testing)', color: 'var(--text-muted)' },
+  { label: 'Bytecode (approx.)', value: '~2.8 kb', sub: 'per executor, hand-tuned', color: 'var(--text-muted)' },
+  { label: 'Automated tests', value: '281', sub: 'Foundry + proptest (internal)', color: 'var(--text-muted)' },
+  { label: 'Strategy modules', value: '3', sub: 'Order-flow · Post-fill · Flash loan', color: 'var(--text-muted)' },
+  { label: 'Balancer V2 fee', value: '0%', sub: 'on Polygon (protocol param)', color: 'var(--text-muted)' },
+  { label: 'Target chain', value: 'Polygon', sub: '~2s block time (network)', color: 'var(--text-muted)' },
 ]
 
 export default function StatsBar() {
