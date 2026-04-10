@@ -34,23 +34,24 @@ export default function HeroSection() {
         post-fill, and flash-loan-assisted paths against compact{' '}
         <span style={{ color: 'var(--text)' }}>Yul</span> executors. The stack is in active
         development: contracts are exercised on-chain for testing; live trading metrics will be published
-        when we open a controlled release.
+        when we open a controlled release. Nexora is <strong style={{ color: 'var(--text)', fontWeight: 600 }}>proprietary software</strong>
+        {' '}— source code is not open source and is not publicly distributed. Technical documentation and runbooks are shared with authorized licensees under agreement.
       </p>
 
       {/* CTA */}
       <div className="hero-cta-row" style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
-        <a href="#architecture" className="btn btn-secondary" style={{ fontSize: 14, padding: '10px 22px' }}>
+        <a href="#architecture" className="btn btn-primary" style={{ fontSize: 14, padding: '10px 22px' }}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
           </svg>
           Technical overview
         </a>
-        <a href="#waitlist" className="btn btn-primary" style={{ fontSize: 14, padding: '10px 22px' }}>
+        <a href="#waitlist" className="btn btn-secondary" style={{ fontSize: 14, padding: '10px 22px' }}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M22 2L11 13M22 2L15 22 11 13 2 9l20-7z"/>
           </svg>
-          Request updates
+          Request access / updates
         </a>
       </div>
 
@@ -66,7 +67,7 @@ export default function HeroSection() {
           { label: 'Foundry', color: 'var(--text-sub)' },
           { label: 'Balancer V2', color: 'var(--text-sub)' },
           { label: 'Polygon PoS', color: 'var(--text-sub)' },
-          { label: '281 tests (repo)', color: 'var(--text-sub)' },
+          { label: 'Foundry + Rust tests', color: 'var(--text-sub)' },
         ].map(({ label, color }) => (
           <span key={label} style={{ color }}>{label}</span>
         ))}

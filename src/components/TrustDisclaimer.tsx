@@ -17,7 +17,7 @@ export default function TrustDisclaimer() {
           Nexora is pre-production software. On-chain activity today is simulation and validation—not a
           solicitation to trade, and not investment advice. Past or hypothetical performance does not
           guarantee future results. Use of MEV-related strategies may be restricted or unlawful in your
-          jurisdiction; you are responsible for compliance.
+          jurisdiction; you are responsible for compliance. Nexora is proprietary: source code and full technical documentation are not open source and are provided only under license to authorized parties.
         </p>
       </div>
     </section>

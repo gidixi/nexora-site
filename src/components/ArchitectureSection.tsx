@@ -21,7 +21,7 @@ export default function ArchitectureSection() {
         <div className="badge badge-muted" style={{ marginBottom: 12 }}>Architecture</div>
         <h2 style={{ fontSize: 'clamp(24px, 5vw, 32px)', fontWeight: 700, margin: 0, letterSpacing: '-0.03em' }}>Async Rust pipeline</h2>
         <p style={{ color: 'var(--text-muted)', marginTop: 10, fontSize: 'clamp(13px, 3vw, 15px)', maxWidth: 560, marginLeft: 'auto', marginRight: 'auto' }}>
-          End-to-end path from market data to signed calldata. Latency budgets are measured in our test environments; production figures vary with peers, hardware, and chain conditions.
+          End-to-end path from market data to signed calldata. Latency budgets are measured in our test environments; production figures vary with peers, hardware, and chain conditions. Module layout, environment variables, and runbooks are documented in the licensee documentation package—not distributed as open source.
         </p>
       </div>
 

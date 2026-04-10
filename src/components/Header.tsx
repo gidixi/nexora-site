@@ -1,6 +1,5 @@
 'use client'
 import { useState, useEffect } from 'react'
-
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
