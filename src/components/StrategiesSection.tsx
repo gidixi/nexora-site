@@ -46,13 +46,13 @@ const strategies = [
 
 export default function StrategiesSection() {
   return (
-    <section id="strategies" style={{ padding: '0 20px 80px', maxWidth: 960, margin: '0 auto' }}>
+    <section id="strategies" className="section-page-x" style={{ padding: '0 0 80px', maxWidth: 960, margin: '0 auto' }}>
       <div style={{ textAlign: 'center', marginBottom: 40 }}>
         <div className="badge badge-muted" style={{ marginBottom: 12 }}>Strategies</div>
         <h2 style={{ fontSize: 'clamp(24px, 5vw, 32px)', fontWeight: 800, margin: 0, letterSpacing: '-0.5px' }}>Three MEV Strategies, One Engine</h2>
         <p style={{ color: 'var(--text-muted)', marginTop: 10, fontSize: 'clamp(13px, 3vw, 15px)' }}>Each strategy shares the same Rust async runtime and on-chain executor contracts.</p>
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
+      <div className="card-grid-responsive" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: 16 }}>
         {strategies.map(s => (
           <div key={s.id} className="card" style={{ borderTop: `2px solid ${s.color}` }}>
             <div className="card-header">
@@ -73,7 +73,7 @@ export default function StrategiesSection() {
               )}
               <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                 {s.details.map(d => (
-                  <div key={d.label} style={{ display: 'flex', justifyContent: 'space-between', gap: 8, flexWrap: 'wrap' }}>
+                  <div key={d.label} className="kv-row-mobile-stack" style={{ display: 'flex', justifyContent: 'space-between', gap: 8, flexWrap: 'wrap' }}>
                     <span style={{ fontSize: 11, color: 'var(--text-sub)', flexShrink: 0 }}>{d.label}</span>
                     <span style={{ fontSize: 11, color: 'var(--text-muted)', textAlign: 'right', fontFamily: 'var(--font-mono)' }}>{d.value}</span>
                   </div>

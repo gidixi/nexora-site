@@ -16,7 +16,7 @@ export default function WaitlistSection({ count }: { count: number }) {
   }
 
   return (
-    <section id="waitlist" style={{ padding: '0 20px 100px', maxWidth: 960, margin: '0 auto' }}>
+    <section id="waitlist" className="section-page-x" style={{ padding: '0 0 100px', maxWidth: 960, margin: '0 auto' }}>
       <div style={{
         background: 'var(--bg-surface)', border: '1px solid var(--border)',
         borderRadius: 12, padding: 'clamp(28px, 5vw, 48px)',

@@ -13,7 +13,7 @@ import Footer from '@/components/Footer'
 export default function Home() {
   const [waitlistCount] = useState(0)
   return (
-    <main style={{ minHeight: '100vh', background: 'var(--bg-base)' }}>
+    <main className="main-safe-bottom" style={{ minHeight: '100vh', background: 'var(--bg-base)' }}>
       <Header />
       <HeroSection />
       <StatsBar />

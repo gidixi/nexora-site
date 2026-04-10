@@ -9,7 +9,7 @@ const stats = [
 
 export default function StatsBar() {
   return (
-    <section style={{ padding: '0 20px 60px', maxWidth: 960, margin: '0 auto' }}>
+    <section className="section-page-x" style={{ padding: '0 0 60px', maxWidth: 960, margin: '0 auto' }}>
       <div style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',

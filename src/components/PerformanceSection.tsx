@@ -9,7 +9,7 @@ export default function PerformanceSection() {
   ]
 
   return (
-    <section id="performance" style={{ padding: '0 20px 80px', maxWidth: 960, margin: '0 auto' }}>
+    <section id="performance" className="section-page-x" style={{ padding: '0 0 80px', maxWidth: 960, margin: '0 auto' }}>
       <div style={{ textAlign: 'center', marginBottom: 40 }}>
         <div className="badge badge-warning" style={{ marginBottom: 12 }}>Performance · Simulation Phase</div>
         <h2 style={{ fontSize: 'clamp(24px, 5vw, 32px)', fontWeight: 800, margin: 0, letterSpacing: '-0.5px' }}>Live Data Coming Q2 2026</h2>
@@ -17,13 +17,13 @@ export default function PerformanceSection() {
       </div>
 
       {/* Stack on mobile */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
+      <div className="card-grid-responsive" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: 16 }}>
         <div className="card">
           <div className="card-header">Rust Benchmarks (cargo bench)</div>
           <div className="card-body">
             {benchmarks.map(b => (
               <div key={b.fn} style={{ marginBottom: 12 }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4, gap: 8, flexWrap: 'wrap' }}>
+                <div className="kv-row-mobile-stack" style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 4, gap: 8, flexWrap: 'wrap' }}>
                   <code style={{ fontSize: 11, color: 'var(--text-muted)', wordBreak: 'break-all' }}>{b.fn}</code>
                   <span style={{ fontSize: 11, fontFamily: 'var(--font-mono)', color: b.color, flexShrink: 0 }}>{b.limit}</span>
                 </div>
@@ -46,7 +46,7 @@ export default function PerformanceSection() {
               { label: 'Flash arb cycles / day', value: '—', note: 'Balancer + Aave' },
               { label: 'Gas cost / month', value: '<$20', note: '@100 gwei Polygon' },
             ].map(m => (
-              <div key={m.label} style={{
+              <div key={m.label} className="kv-row-mobile-stack" style={{
                 display: 'flex', justifyContent: 'space-between', alignItems: 'center',
                 padding: '7px 0', borderBottom: '1px solid var(--border-muted)',
                 gap: 8,
