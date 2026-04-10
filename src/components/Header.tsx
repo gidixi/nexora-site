@@ -40,7 +40,7 @@ export default function Header() {
             flexShrink: 0,
           }}>N</div>
           <span style={{ fontWeight: 700, fontSize: 15, letterSpacing: '-0.3px' }}>Nexora</span>
-          <span className="badge badge-warning" style={{ marginLeft: 2, flexShrink: 0 }}>Simulation</span>
+          <span className="badge badge-neutral" style={{ marginLeft: 2, flexShrink: 0 }}>Pre-production</span>
         </div>
 
         {/* Desktop nav */}
@@ -53,7 +53,7 @@ export default function Header() {
               onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-muted)')}
             >{item}</a>
           ))}
-          <a href="#waitlist" className="btn btn-primary" style={{ marginLeft: 8 }}>Join Waitlist</a>
+          <a href="#waitlist" className="btn btn-primary" style={{ marginLeft: 8 }}>Request updates</a>
         </nav>
 
         {/* Hamburger */}
@@ -110,7 +110,7 @@ export default function Header() {
             onClick={() => setMenuOpen(false)}
             className="btn btn-primary"
             style={{ marginTop: 8, justifyContent: 'center', padding: '10px' }}
-          >Join Waitlist</a>
+          >Request updates</a>
         </div>
       )}
 

@@ -2,12 +2,14 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Nexora — Production MEV Bot on Polygon',
-  description: 'Production-grade MEV infrastructure on Polygon. Sandwich, backrun and flash loan arbitrage in a single Rust engine with Yul smart contracts.',
-  keywords: ['MEV', 'Polygon', 'sandwich bot', 'arbitrage', 'DeFi', 'Rust', 'Yul', 'flash loan'],
+  title: 'Nexora — Polygon execution infrastructure',
+  description:
+    'Rust-based execution stack and compact Yul executors on Polygon PoS. Pre-production: simulation, testing, and controlled validation.',
+  keywords: ['Polygon', 'DeFi', 'execution', 'arbitrage', 'MEV', 'Rust', 'Yul', 'smart contracts'],
   openGraph: {
-    title: 'Nexora — Production MEV Bot on Polygon',
-    description: 'Production-grade MEV infrastructure. Rust engine + Yul contracts. Sandwich · Backrun · Flash Loan Arb.',
+    title: 'Nexora — Polygon execution infrastructure',
+    description:
+      'Rust engine and Yul executors for DEX-related strategies. Pre-production; metrics and addresses are disclosed for verification where applicable.',
     type: 'website',
   },
 }

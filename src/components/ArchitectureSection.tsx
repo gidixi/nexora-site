@@ -19,8 +19,10 @@ export default function ArchitectureSection() {
     <section id="architecture" className="section-page-x" style={{ padding: '0 0 80px', maxWidth: 960, margin: '0 auto' }}>
       <div style={{ textAlign: 'center', marginBottom: 40 }}>
         <div className="badge badge-muted" style={{ marginBottom: 12 }}>Architecture</div>
-        <h2 style={{ fontSize: 'clamp(24px, 5vw, 32px)', fontWeight: 800, margin: 0, letterSpacing: '-0.5px' }}>Async Rust Pipeline</h2>
-        <p style={{ color: 'var(--text-muted)', marginTop: 10, fontSize: 'clamp(13px, 3vw, 15px)' }}>Sub-500ms P95 tick: from mempool observation to signed transaction.</p>
+        <h2 style={{ fontSize: 'clamp(24px, 5vw, 32px)', fontWeight: 700, margin: 0, letterSpacing: '-0.03em' }}>Async Rust pipeline</h2>
+        <p style={{ color: 'var(--text-muted)', marginTop: 10, fontSize: 'clamp(13px, 3vw, 15px)', maxWidth: 560, marginLeft: 'auto', marginRight: 'auto' }}>
+          End-to-end path from market data to signed calldata. Latency budgets are measured in our test environments; production figures vary with peers, hardware, and chain conditions.
+        </p>
       </div>
 
       {/* Pipeline — horizontal scroll on mobile */}

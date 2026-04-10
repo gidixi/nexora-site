@@ -66,6 +66,10 @@ body.menu-open {
   overflow: hidden;
 }
 
+a.footer-link:hover {
+  color: var(--blue);
+}
+
 /* Card grids: never force horizontal page scroll on narrow phones */
 @media (max-width: 360px) {
   .card-grid-responsive {
@@ -112,6 +116,9 @@ input, select, textarea { font-size: 16px; }
 .badge-warning { background: #3a2e00; color: var(--yellow); border: 1px solid var(--yellow-dim); }
 .badge-info { background: #1a2f4a; color: var(--blue); border: 1px solid var(--blue-dim); }
 .badge-muted { background: var(--bg-elevated); color: var(--text-muted); border: 1px solid var(--border); }
+.badge-neutral { background: var(--bg-elevated); color: var(--text-sub); border: 1px solid var(--border); font-weight: 500; }
+
+.conn-dot.subtle { background: var(--text-sub); box-shadow: none; animation: none; }
 
 .btn { font-size: 12px; font-weight: 500; border-radius: 6px; padding: 5px 12px; cursor: pointer; transition: var(--transition); border: 1px solid transparent; display: inline-flex; align-items: center; gap: 6px; }
 .btn:hover:not(:disabled) { filter: brightness(1.15); }
