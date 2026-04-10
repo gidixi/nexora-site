@@ -1,9 +1,7 @@
 export default function HeroSection() {
   return (
-    <section style={{
-      paddingTop: 'calc(var(--header-height) + 60px)',
+    <section className="hero-pt section-page-x" style={{
       paddingBottom: 60,
-      paddingLeft: 20, paddingRight: 20,
       maxWidth: 960, margin: '0 auto',
       textAlign: 'center',
     }}>
@@ -46,7 +44,7 @@ export default function HeroSection() {
       </p>
 
       {/* CTA */}
-      <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
+      <div className="hero-cta-row" style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
         <a href="#waitlist" className="btn btn-primary" style={{ fontSize: 14, padding: '10px 22px' }}>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M22 2L11 13M22 2L15 22 11 13 2 9l20-7z"/>

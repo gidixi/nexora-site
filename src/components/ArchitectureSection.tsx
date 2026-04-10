@@ -16,7 +16,7 @@ const filters = [
 
 export default function ArchitectureSection() {
   return (
-    <section id="architecture" style={{ padding: '0 20px 80px', maxWidth: 960, margin: '0 auto' }}>
+    <section id="architecture" className="section-page-x" style={{ padding: '0 0 80px', maxWidth: 960, margin: '0 auto' }}>
       <div style={{ textAlign: 'center', marginBottom: 40 }}>
         <div className="badge badge-muted" style={{ marginBottom: 12 }}>Architecture</div>
         <h2 style={{ fontSize: 'clamp(24px, 5vw, 32px)', fontWeight: 800, margin: 0, letterSpacing: '-0.5px' }}>Async Rust Pipeline</h2>
@@ -26,7 +26,7 @@ export default function ArchitectureSection() {
       {/* Pipeline — horizontal scroll on mobile */}
       <div className="card" style={{ marginBottom: 16 }}>
         <div className="card-header">Execution Pipeline</div>
-        <div className="card-body" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+        <div className="card-body arch-pipeline-scroll" style={{ overflowX: 'auto' }}>
           <div style={{ display: 'flex', alignItems: 'center', minWidth: 560 }}>
             {pipeline.map((p, i) => (
               <div key={p.step} style={{ display: 'flex', alignItems: 'center' }}>
@@ -50,7 +50,7 @@ export default function ArchitectureSection() {
       </div>
 
       {/* 2-col grid — stacks on mobile */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 16 }}>
+      <div className="card-grid-responsive" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: 16 }}>
         <div className="card">
           <div className="card-header">Filter Pipeline — ordered by CPU cost</div>
           <div className="card-body">
@@ -75,7 +75,7 @@ export default function ArchitectureSection() {
                 { label: 'Sizing algorithm', value: 'Ternary search — 100 iter', color: 'var(--green)' },
                 { label: 'Output', value: 'Top 10 cycles by net profit', color: 'var(--text-muted)' },
               ].map(item => (
-                <div key={item.label} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+                <div key={item.label} className="kv-row-mobile-stack" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
                   <span style={{ fontSize: 11, color: 'var(--text-sub)' }}>{item.label}</span>
                   <span style={{ fontSize: 11, fontFamily: 'var(--font-mono)', color: item.color }}>{item.value}</span>
                 </div>
